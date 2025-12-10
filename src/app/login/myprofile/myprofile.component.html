@@ -1,0 +1,15 @@
+<div class="profile card">
+	<h2 class="title">My Profile</h2>
+
+	<div *ngIf="user; else noUser">
+		<div class="row"><strong>Name:</strong> <span>{{ user.name || '-' }}</span></div>
+		<div class="row"><strong>Email:</strong> <span>{{ user.email || '-' }}</span></div>
+		<div class="row"><strong>Login Date:</strong> <span>{{ loginDate || '-' }}</span></div>
+		<div class="row"><strong>Status:</strong> <span>{{ userStatus || '-' }}</span></div>
+		<div class="row"><strong>Last Login:</strong> <span>{{ lastLogin || '-' }}</span></div>
+	</div>
+
+	<ng-template #noUser>
+		<p>No profile information available. Please register or login.</p>
+	</ng-template>
+</div>

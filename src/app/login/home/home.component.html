@@ -1,0 +1,43 @@
+<div class="home-guest" *ngIf="!user; else dashboard">
+	<div class="hero">
+		<div class="hero-inner">
+			<h1 class="hero-title">Build beautiful apps faster</h1>
+			<p class="hero-sub">A simple demo to showcase navigation, auth flow and modern UI components.</p>
+
+			<div class="cta">
+				<a routerLink="/register" class="btn primary">Get Started</a>
+				<a routerLink="/login" class="btn outline">Sign In</a>
+			</div>
+		</div>
+		<div class="hero-visual">
+			<!-- small visual placeholder -->
+			<div class="visual-card">Welcome</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #dashboard>
+	<!-- Only show dashboard if no child route is active -->
+	<div class="home-container card" *ngIf="!isChildRoute; else childContent">
+		<h1 class="greeting">Welcome back, {{ user.name || user.email }}!</h1>
+		<p class="welcome">Here are some quick actions for your account.</p>
+
+		<div class="grid">
+			<div class="tile">
+				<h3>Profile</h3>
+				<p>View and edit your profile information.</p>
+				<a routerLink="myprofile" class="link">Open Profile</a>
+			</div>
+
+			<div class="tile">
+				<h3>Settings</h3>
+				<p>Manage app settings and preferences.</p>
+				<a class="link" (click)="logout()">Logout</a>
+			</div>
+		</div>
+	</div>
+
+	<ng-template #childContent>
+		<router-outlet></router-outlet>
+	</ng-template>
+</ng-template>

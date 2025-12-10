@@ -1,0 +1,163 @@
+.productlist-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.products-table thead {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #007bff;
+}
+
+.products-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #111;
+  font-size: 14px;
+}
+
+.products-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ecef;
+  color: #555;
+}
+
+.products-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.products-table tbody tr.low-stock {
+  background-color: #fff3cd;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.in-stock {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge.low-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 300px;
+}
+
+.cart-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #f8f9fa;
+  padding: 4px;
+}
+
+.btn-remove {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-remove:hover {
+  background-color: #c82333;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.summary-row.total {
+  padding: 12px 0;
+  margin-top: 12px;
+  border-top: 2px solid #ddd;
+  color: #111;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-clear {
+  width: 100%;
+  margin-top: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-clear:hover {
+  background-color: #0056b3;
+}

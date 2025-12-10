@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">Fita demo</div>
+    
+    <ul class="navbar-menu">
+      <li><a routerLink="/home" [class.active]="isActive('/home')">Home</a></li>
+      
+      <ng-container *ngIf="!isLoggedIn">
+        <li><a routerLink="/login" [class.active]="isActive('/login')">Login</a></li>
+        <li><a routerLink="/register" [class.active]="isActive('/register')">Register</a></li>
+      </ng-container>
+
+      <ng-container *ngIf="isLoggedIn">
+        <li><a routerLink="/home/myprofile" [class.active]="isActive('/home/myprofile')">My Profile</a></li>
+        
+        <li><a routerLink="/home/products" [class.active]="isActive('/home/products')">Products</a></li>
+        <li><a routerLink="/home/productlist" [class.active]="isActive('/home/productlist')">Product List</a></li>
+        <li><a routerLink="/home/add-user" [class.active]="isActive('/home/add-user')">Add User</a></li>
+        <li><a routerLink="/home/grids-show" [class.active]="isActive('/home/grids-show')">Grid Show</a></li>
+
+        
+        <li>
+          <button class="logout-btn" (click)="logout()">Logout</button>
+        </li>
+      </ng-container>
+    </ul>
+    
+    <!-- <button class="view-cart-btn">View Cart (1)</button> -->
+    
+  </div>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

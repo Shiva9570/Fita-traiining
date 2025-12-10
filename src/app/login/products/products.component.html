@@ -1,0 +1,42 @@
+<div class="products-wrapper">
+  <!-- Toggle Button -->
+  <div class="toggle-section">
+    <button class="toggle-btn" (click)="toggleCart()">
+      {{ showCart ? '← Back to Products' : 'View Cart (' + cartItems.length + ')' }}
+    </button>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products-container card" *ngIf="!showCart">
+    <h2 class="title">Our Products</h2>
+    <p class="subtitle">Browse our collection of premium products</p>
+
+    <div *ngIf="loading" class="loading">
+      <p>Loading products...</p>
+    </div>
+
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+
+    <div class="products-grid" *ngIf="!loading && !error">
+      <div class="product-card" *ngFor="let product of products">
+        <div class="product-image">
+          <img *ngIf="product.image" [src]="product.image" [alt]="product.title" class="product-img" onerror="this.src='https://via.placeholder.com/200'">
+        </div>
+        <h3>{{ product.title }}</h3>
+        <p class="description">{{ product.description }}</p>
+        <div class="product-footer">
+          <span class="price">${{ product.price }}</span>
+          <button class="btn-small" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Section (Child Component) -->
+  <app-productlist 
+    *ngIf="showCart"
+    [cartItems]="cartItems">
+  </app-productlist>
+</div>

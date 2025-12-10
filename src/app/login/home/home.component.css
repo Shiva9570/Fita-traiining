@@ -1,0 +1,24 @@
+.card{background:#fff;padding:28px;border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.08)}
+.home-container{max-width:900px;margin:40px auto;font-family:Inter, Arial, sans-serif}
+.greeting{font-size:28px;margin-bottom:6px;color:#111}
+.welcome{color:#444;margin-bottom:18px}
+.actions{margin-top:16px}
+.btn.primary{background:#d321f7;color:#fff;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+
+/* Guest hero styles */
+.home-guest{max-width:1200px;margin:36px auto;padding:20px}
+.hero{display:flex;gap:24px;align-items:center}
+.hero-inner{flex:1}
+.hero-title{font-size:32px;margin:0 0 8px}
+.hero-sub{color:#555;margin-bottom:16px}
+.cta{display:flex;gap:12px}
+.btn.outline{background:transparent;border:1px solid #d321f7;color:#d321f7;padding:10px 14px;border-radius:8px;text-decoration:none}
+.hero-visual{width:320px}
+.visual-card{background:linear-gradient(135deg,#d321f720,#d321f720);height:160px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#d321f7;font-weight:700}
+
+/* Dashboard grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.tile{background:#fff;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.tile h3{margin:0 0 8px}
+.tile p{color:#555;margin:0 0 12px}
+.link{color:#d321f7;text-decoration:none;font-weight:600}
