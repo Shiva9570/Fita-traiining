@@ -1,12 +1,8 @@
-<h1>GRID WORKS</h1>
-
-<div class="ag-theme-alpine" style="height: 400px; width: 800px;">
+<div style="height: 400px; width: 800px;">
   <ag-grid-angular
-    [theme]="theme"
+    class="ag-grid-box"
     [rowData]="rowData"
     [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    (cellValueChanged)="onCellValueChanged($event)"
-  >
+    [defaultColDef]="defaultColDef">
   </ag-grid-angular>
 </div>

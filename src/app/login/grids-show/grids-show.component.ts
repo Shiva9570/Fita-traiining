@@ -18,7 +18,7 @@ interface UserRow {
   styleUrls: ['./grids-show.component.css'],
 })
 export class GridShowComponent {
-  theme: 'legacy' = 'legacy';
+  // theme: 'legacy' = 'legacy';
 
   columnDefs: ColDef<UserRow>[] = [
     { field: 'id', editable: false, flex: 1 },

@@ -8,33 +8,34 @@ import { ProductlistComponent } from './login/productlist/productlist.component'
 import { AddUserComponent } from './login/add-user/add-user.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
-import{ GridShowComponent} from  './login/grids-show/grids-show.component';
+import { GridShowComponent } from './login/grids-show/grids-show.component';
+import { MaleFemaleComponent } from './male-female/male-female.component';
 
 export const routes: Routes = [
-  { 
-    path: 'login', 
+  {
+    path: 'login',
     component: LoginpageComponent,
-    canActivate: [LoginGuard]
+    canActivate: [LoginGuard],
   },
 
-  { 
-    path: 'register', 
+  {
+    path: 'register',
     component: RegisterComponent,
-    canActivate: [LoginGuard]
+    canActivate: [LoginGuard],
   },
 
-  
-  { 
-    path: 'home', 
+  {
+    path: 'home',
     component: HomeComponent,
     canActivateChild: [AuthGuard],
     children: [
       { path: 'myprofile', component: MyprofileComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'productlist', component: ProductlistComponent },
-      { path:  'add-user', component:  AddUserComponent},
-      {path: 'grids-show', component: GridShowComponent}
-    ]
+      { path: 'add-user', component: AddUserComponent },
+      { path: 'grids-show', component: GridShowComponent },
+      { path: 'male-female', component: MaleFemaleComponent }
+    ],
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

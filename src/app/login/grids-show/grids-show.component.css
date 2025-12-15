@@ -1,4 +1,9 @@
-.ag-theme-alpine {
-  --ag-font-size: 14px;
-  --ag-cell-horizontal-padding: 11px;
+.ag-grid-box {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.ag-grid-box ::ng-deep .ag-header-cell-label {
+  justify-content: center;
+  font-weight: bold;
 }
